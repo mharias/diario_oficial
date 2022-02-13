@@ -148,7 +148,7 @@ class RSS_cnmc():
         self.logger.log_text('Comenzamos preparacion Cuerpo mensaje',severity='Info')
         if df.shape[0]!=0:
             rc='<br/>'
-            texto=rc+'Egun on, bo día, bon dia, buenos días:'+rc
+            texto=rc+'Buenas tardes:'+rc
             texto+='Resumen de noticias de Telecomunicaciones publicadas en el portal de la CNMC {}'.format('https://www.cnmc.es/ambitos-de-actuacion/telecomunicaciones')
             texto+=rc
 

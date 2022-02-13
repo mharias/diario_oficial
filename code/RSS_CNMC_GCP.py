@@ -31,6 +31,10 @@ import sys
 
 from class_rss_cnmc import RSS_cnmc
 
+lista_emails = ['andres.silvestre@evolutio.com','narcis.coll@evolutio.com','patricia.olive@evolutio.com',
+                'norberto.perez@evolutio.com','angel.vadillo@evolutio.com','jacinto.cavestany@evolutio.com',
+                'jose.crespo@evolutio.com','mario.reiter@evolutio.com','marilo.quevedo@evolutio.com',
+                'alvaro.delacueva@evolutio.com','rafael.barrientos@evolutio.com','manuel.arias@evolutio.com']
 
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = path_google_credential_gcp
 logging_client = logging.Client()
@@ -41,8 +45,8 @@ enlace_rss = 'https://www.cnmc.es/feed/telecomunicaciones'
 robot = RSS_cnmc(enlace_rss,apikey_walyt,apisecretkey_walyt,AccessToken_walyt,
               AccessTokenSecret_walyt,sender_email,sender_password,sender_smtp,token_bitly,path_proyecto_gcp)
 df = robot.load_rss()
-resultado = robot.filtra_resultado(df,desde=7)
-mensaje_correo = robot.cuerpo_correo_noticias(resultado,nombre_empresa='')
+resultado = robot.filtra_resultado(df,desde=1)
+mensaje_correo = robot.cuerpo_correo_noticias(resultado,nombre_empresa='evolutio')
 if resultado.shape[0]!=0:
-    robot.send_mail(mensaje_correo,'waly00@gmail.com',port=587)
+    robot.send_mail(mensaje_correo,lista_emails,port=587)
     robot.publicar_tweets(resultado)
