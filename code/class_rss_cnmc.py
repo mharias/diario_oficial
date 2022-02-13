@@ -66,11 +66,15 @@ class RSS_cnmc():
 
 
     def load_rss(self):
+        
+        headers = {'Content-type' : 'text/xml',
+                   'User-Agent': 'Mozilla/5.0 (X11; Linux i586; rv:31.0) Gecko/20100101 Firefox/31.0'
+                    }
 
 
         url = self.rss
         http = urllib3.PoolManager()
-        response = http.request('GET', url)
+        response = http.request('GET', url,headers=headers)
         root = ET.fromstring(response.data)
         
         df_historico = pd.DataFrame()
