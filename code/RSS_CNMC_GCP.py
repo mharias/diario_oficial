@@ -41,7 +41,7 @@ enlace_rss = 'https://www.cnmc.es/feed/telecomunicaciones'
 robot = RSS_cnmc(enlace_rss,apikey_walyt,apisecretkey_walyt,AccessToken_walyt,
               AccessTokenSecret_walyt,sender_email,sender_password,sender_smtp,token_bitly,path_proyecto_gcp)
 df = robot.load_rss()
-resultado = robot.filtra_resultado(df,desde=1)
+resultado = robot.filtra_resultado(df,desde=7)
 mensaje_correo = robot.cuerpo_correo_noticias(resultado,nombre_empresa='')
 if resultado.shape[0]!=0:
     robot.send_mail(mensaje_correo,'waly00@gmail.com',port=587)

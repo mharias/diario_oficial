@@ -192,7 +192,7 @@ class RSS_cnmc():
             self.logger.log_text('Cuerpo mensaje preparado',severity='Info')
             return mensaje
         else:
-            self.logger.log_text('Error preparando mensaje',severity='Info')
+            self.logger.log_text('Mensaje vacío',severity='Info')
             return False
     
     def filtra_resultado(self, df, desde=1):
