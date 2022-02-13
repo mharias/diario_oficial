@@ -38,6 +38,7 @@ class RSS_cnmc():
                 sender_email_,
                  sender_password_,
                  sender_smtp_,
+                 token_bitly_,
                 path_proyecto):
 
         self.rss = path_rss_
@@ -49,6 +50,8 @@ class RSS_cnmc():
         self.sender_email = sender_email_
         self.sender_password = sender_password_
         self.sender_server = sender_smtp_
+        self.token_bitly = token_bitly_
+        
         self.path_proyecto = path_proyecto
 
         self.fuente = 'Servicio RSS de https://www.esios.ree.es'
@@ -102,7 +105,7 @@ class RSS_cnmc():
             self.logger.log_text('Arrancamos API Twitter',severity='Info')
             api=twitter.Api(self.consumer_key,self.consumer_secret,self.access_token_key,self.access_token_secret,sleep_on_rate_limit=True)
             headers = {
-                'Authorization': 'Bearer {}'.format(token_bitly),
+                'Authorization': 'Bearer {}'.format(self.token_bitly),
                 'Content-Type': 'application/json',
                         }
             self.logger.log_text('API Twitter arrancada',severity='Info')
