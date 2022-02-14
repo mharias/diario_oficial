@@ -122,9 +122,9 @@ class RSS_cnmc():
                 text3 = 'Fuente https://www.cnmc.es/ambitos-de-actuacion/telecomunicaciones'
                 text3 ='Fuente feed RSS de CNMC Teleco'
                 texto=text1+CR+titulo+CR+f'enlace: {enlace_corto}'+CR+text3+CR+text2
-                if len(texto)>280:
+                if len(texto)>278:
                     len_titulo = len(titulo)
-                    alt_titulo = titulo[:len_titulo-len(texto)+280-5]+'.'*5
+                    alt_titulo = titulo[:len_titulo-len(texto)+278-3]+'.'*3
                     texto=text1+CR+alt_titulo+CR+f'enlace: {enlace_corto}'+CR+text3+CR+text2
                 # print (f'{len(texto)}{texto}{CR*5}')
 
