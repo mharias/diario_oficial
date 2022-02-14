@@ -33,8 +33,9 @@ from class_rss_cnmc import RSS_cnmc
 
 lista_emails = ['andres.silvestre@evolutio.com','narcis.coll@evolutio.com','patricia.olive@evolutio.com',
                 'norberto.perez@evolutio.com','angel.vadillo@evolutio.com','jacinto.cavestany@evolutio.com',
-                'jose.crespo@evolutio.com','mario.reiter@evolutio.com','marilo.quevedo@evolutio.com',
-                'alvaro.delacueva@evolutio.com','rafael.barrientos@evolutio.com','manuel.arias@evolutio.com']
+                'josemanuel.crespo@evolutio.com','mario.reiter@evolutio.com','marilo.quevedo@evolutio.com',
+                'alvaro.delacueva@evolutio.com','rafael.barrientos@evolutio.com','manuel.arias@evolutio.com',
+                'roberto.sanchez@evolutio.com','javier.barbero@evolutio.com']
 
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = path_google_credential_gcp
 logging_client = logging.Client()
