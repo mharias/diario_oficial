@@ -18,7 +18,7 @@ import os.path
 import numpy as np
 sys.path.append("/Users/mharias/Documents/proyectos/mylibs") # directorio de acceso a librerías auxiliares
 sys.path.append('/home/waly00/mylibs')
-from pass_rss_cncm import apikey_walyt,apisecretkey_walyt,AccessToken_walyt,AccessTokenSecret_walyt,token_bitly,sender_password,sender_email,sender_smtp,path_proyecto,path_proyecto_gcp,path_google_credential ,path_google_credential_gcp
+from pass_rss_cncm import apikey_walyt,apisecretkey_walyt,AccessToken_walyt,AccessTokenSecret_walyt,token_bitly,sender_password,sender_email,sender_smtp,path_proyecto,path_proyecto_gcp,path_google_credential ,path_google_credential_gcp, lista_emails
 
 from google.cloud import logging
 import html.parser as htmlparser
@@ -30,12 +30,6 @@ import twitter
 import sys
 
 from class_rss_cnmc import RSS_cnmc
-
-lista_emails = ['andres.silvestre@evolutio.com','narcis.coll@evolutio.com','patricia.olive@evolutio.com',
-                'norberto.perez@evolutio.com','angel.vadillo@evolutio.com','jacinto.cavestany@evolutio.com',
-                'josemanuel.crespo@evolutio.com','mario.reiter@evolutio.com','marilo.quevedo@evolutio.com',
-                'alvaro.delacueva@evolutio.com','rafael.barrientos@evolutio.com','manuel.arias@evolutio.com',
-                'roberto.sanchez@evolutio.com','javier.barbero@evolutio.com']
 
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = path_google_credential_gcp
 logging_client = logging.Client()
