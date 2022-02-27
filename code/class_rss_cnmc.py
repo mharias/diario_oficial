@@ -118,7 +118,7 @@ class RSS_cnmc():
                 CR='\n'
                 titulo = datos.loc[entrada,'titulo']
                 text1 = 'Noticias desde CNMC:'
-                text2='#cncm #telecomunicaciones'
+                text2='#cnmc #telecomunicaciones'
                 text3 = 'Fuente https://www.cnmc.es/ambitos-de-actuacion/telecomunicaciones'
                 text3 ='Fuente feed RSS de CNMC Teleco'
                 texto=text1+CR+titulo+CR+f'enlace: {enlace_corto}'+CR+text3+CR+text2

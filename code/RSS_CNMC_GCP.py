@@ -45,3 +45,4 @@ mensaje_correo = robot.cuerpo_correo_noticias(resultado,nombre_empresa='evolutio
 if resultado.shape[0]!=0:
     robot.send_mail(mensaje_correo,lista_emails,port=587)
     robot.publicar_tweets(resultado)
+logger.log_text('Finaliza el script',severity='Info')
